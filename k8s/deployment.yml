@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shop-api-gateway-service
+  labels:
+    app: shop-api-gateway-service
+spec:
+  selector:
+    matchLabels:
+      app: shop-api-gateway-service
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: shop-api-gateway-service
+    spec:
+      containers:
+        - name: shop-api-gateway-service
+          image: thusharathiwanka/shop-api-gateway-service:latest
+          ports:
+            - containerPort: 5000
