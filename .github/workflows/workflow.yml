@@ -26,4 +26,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/gateway-service
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/shop-api-gateway-service
