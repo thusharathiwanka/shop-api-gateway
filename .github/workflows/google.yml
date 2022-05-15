@@ -49,11 +49,11 @@ jobs:
       #     workload_identity_provider: "projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider"
       #     service_account: "854019103890-compute@developer.gserviceaccount.com"
 
-      Alternative option - authentication via credentials json
-      - id: 'auth'
-        uses: 'google-github-actions/auth@v0'
+      # Alternative option - authentication via credentials json
+      - id: "auth"
+        uses: "google-github-actions/auth@v0"
         with:
-          credentials_json: '${{ secrets.GKE_SA_KEY }}'
+          credentials_json: "${{ secrets.GKE_SA_KEY }}"
 
       - name: Docker configuration
         run: |-
