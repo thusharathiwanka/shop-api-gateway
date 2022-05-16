@@ -21,7 +21,7 @@ env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: autopilot-cluster-1 # TODO: update to cluster name
   GAR_LOCATION: us-central1 # TODO: update region of the Artifact Registry
-  GKE_ZONE: us-central1-c # TODO: update to cluster zone
+  GKE_ZONE: us-central1 # TODO: update to cluster zone
   DEPLOYMENT_NAME: shop-api-gateway # TODO: update to deployment name
   REPOSITORY: shop-api-gateway # TODO: update to Artifact Registry docker repository
   IMAGE: shop-api-gateway
