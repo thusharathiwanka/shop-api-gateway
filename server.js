@@ -15,12 +15,13 @@ const { verifyAuth } = require("./middleware/auth.middleware");
 const PORT = process.env.PORT || 5000;
 const BASE_URL = "http://localhost:";
 const PRODUCT_URL = "http://34.136.127.97:5001";
-const USER_URL = "http://34.122.167.18:5002";
-const PAYMENT_URL = "http://20.24.130.1:5007";
+const USER_URL = "http://35.188.186.178:5002";
+const PAYMENT_URL = "http://20.24.130.1:8080";
+const ORDER_URL = "http://35.192.50.196:5000";
 
 app.use("/products", verifyAuth, proxy(PRODUCT_URL));
 app.use("/users", verifyAuth, proxy(USER_URL));
-app.use("/orders", verifyAuth, proxy(`${BASE_URL}5003`));
+app.use("/orders", verifyAuth, proxy(ORDER_URL));
 app.use("/feedbacks", verifyAuth, proxy(`${BASE_URL}5004`));
 app.use("/admin", verifyAuth, proxy(`${BASE_URL}5005`));
 app.use("/auth", verifyAuth, proxy(`${BASE_URL}5006`));
