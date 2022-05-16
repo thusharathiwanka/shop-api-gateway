@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
         - name: shop-api-gateway-service
+          imagePullPolicy: Always
           image: thusharathiwanka/shop-api-gateway-service
           ports:
             - containerPort: 5000
