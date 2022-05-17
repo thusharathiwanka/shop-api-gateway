@@ -19,7 +19,7 @@ const USER_URL = "http://35.188.186.178:5002";
 const PAYMENT_URL = "http://20.24.130.1:8080";
 const ORDER_URL = "http://35.192.50.196:5000";
 const AUTH_URL = "http://20.197.65.62:5006";
-const FEEDBACK_URL = "http://20.212.122.130:5000";
+const FEEDBACK_URL = "http://35.192.100.26:5004";
 const ADMIN_URL = "http://35.192.106.101:5000";
 
 app.use("/products", verifyAuth, proxy(PRODUCT_URL));
