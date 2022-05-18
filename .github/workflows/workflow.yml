@@ -55,7 +55,7 @@ jobs:
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v0
       - name: Get the GKE Credentials
-      - run: |-
+        run: |-
           gcloud container clusters get-credentials "$GKE_CLUSTER" --zone "$GKE_ZONE"
       - name: Deploy to GKE Cluster
         run: |-
