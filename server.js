@@ -30,6 +30,6 @@ app.use("/admin", verifyAuth, proxy(ADMIN_URL));
 app.use("/auth", verifyAuth, proxy(AUTH_URL));
 app.use("/payments", verifyAuth, proxy(PAYMENT_URL));
 
-app.get("/", (req, res) => res.status(200).send("<h3>SHOP API - GATEWAY SERVICE</h3>"));
+app.get("/", (req, res) => res.status(200).send("<h3>EXPRESS SHOP API - GATEWAY SERVICE</h3>"));
 
 app.listen(PORT, () => console.log(`gateway service is started and running on port ${PORT}`));
